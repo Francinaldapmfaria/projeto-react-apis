@@ -6,6 +6,8 @@ display: flex;
 color: #FFFFFF;
 padding-top:10px;
 flex-direction: column;
+height: 100%;
+min-height:100vh;
 
 .cards{
     display:flex;
@@ -18,9 +20,9 @@ flex-direction: column;
     font-size: 40px;
 }
 
-
 `
 export const HomePageContainer= styled.div`
     display: flex;
     flex-direction:column;
+    
 `

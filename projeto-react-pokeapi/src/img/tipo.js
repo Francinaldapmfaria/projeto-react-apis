@@ -24,7 +24,7 @@ export const imageType = (type) => {
             return tagFlying;
         case "normal":
             return tagNormal;
-         default:
-            return tagGrass;
+        //  default:
+        //     return tagGrass;
     }
 }
