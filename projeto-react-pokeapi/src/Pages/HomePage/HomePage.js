@@ -2,40 +2,37 @@ import React, { useContext } from 'react'
 import PokemonCard from "../cards/PokemonCard.js"
 import { HomePageContainer, HomeStyled } from './HomePageStyle.js'
 import { GlobalContext } from '../../context/GlobalContext.js'
+import Header from '../../components/Header/Header.js'
 
 
 
 const HomePage = () => {
 
-  const context= useContext(GlobalContext)
-  const{pokemons, setPokemons} = context
+  const context = useContext(GlobalContext)
+  const { pokemons, addToPokedex, pokedex } = context
 
-
-  return (
-<HomePageContainer>
-
-   <HomeStyled>
-     <h2 className='titulo'>Todos os Pokémons</h2>
-     <div className='cards'>
-
-
-     {pokemons.map((pokemon,key) =>{
-       console.log(pokemon)
-       
-       
-       
-       return (
-         <PokemonCard pokemon={pokemon} key={key}>
-
-        </PokemonCard>
-      )
-    })}
+  const filterHomePokemons = () => 
+    pokemons.filter((pokemonsList) =>
+      !pokedex.find((pokemonInPokedex) => pokemonsList.name === pokemonInPokedex.name)
+    )
   
-    </div>
+  return (
+    <HomePageContainer>
+      <Header />
+      <HomeStyled>
+        <h2 className='titulo'>Todos os Pokémons</h2>
+        <div className='cards'>
+         
+          {filterHomePokemons().map((pokemon, key) => {
 
-   </HomeStyled>
-
-</HomePageContainer>
+            return (
+              <PokemonCard key={pokemon.url} name={pokemon.name} 
+              addToPokedex={addToPokedex}></PokemonCard>
+            )
+          })}
+        </div>
+      </HomeStyled>
+    </HomePageContainer>
   )
 }
 
