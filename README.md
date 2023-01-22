@@ -7,7 +7,7 @@ O projeto possui 03 páginas: Home, Pokedex e Detalhes.
 
 ## Requisitos aplicados no Projeto:
 
-## As seguintes ferramentas foram utilizadas neste projeto
+As seguintes ferramentas foram utilizadas neste projeto
    * React
    * React Router
    * Styled-components
