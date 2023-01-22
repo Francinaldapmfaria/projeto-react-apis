@@ -2,7 +2,7 @@
 
 ## Pokedex 
 
-### O projeto React proposto pela Labenu, possui 03 páginas: Home, Pokedex e Detalhes. 
+O projeto possui 03 páginas: Home, Pokedex e Detalhes. 
 
 
 ## Requisitos aplicados no Projeto:
